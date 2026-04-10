@@ -25,7 +25,7 @@ export function Header() {
         <div className="container mx-auto px-4 h-16 flex items-center justify-between max-w-7xl">
           <div className="flex items-center gap-6">
             <Link to="/" className="flex items-center space-x-2">
-              <span className="font-bold text-xl tracking-tight">Hansimov's Blog</span>
+              <span className="font-bold text-xl tracking-tight">Jus-t-in's Blog</span>
             </Link>
             
             <div className="hidden md:flex items-center relative">

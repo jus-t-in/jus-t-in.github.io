@@ -14,7 +14,6 @@ export const categories = [
   'Databases',
   'Workflows',
   'Ubuntu',
-  'LLMs',
 ];
 
 const mdFiles = import.meta.glob('./posts/*.md', { query: '?raw', import: 'default', eager: true }) as Record<string, string>;
@@ -24,7 +23,7 @@ export const posts: Post[] = Object.entries(mdFiles).map(([filepath, rawContent]
   const id = filepath.replace('./posts/', '').replace(/\.md$/, '');
   
   // Basic regex to match frontmatter
-  const frontmatterRegex = /^---\n([\s\S]*?)\n---\n([\s\S]*)$/;
+  const frontmatterRegex = /^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/;
   const match = rawContent.match(frontmatterRegex);
 
   if (!match) {
@@ -43,7 +42,7 @@ export const posts: Post[] = Object.entries(mdFiles).map(([filepath, rawContent]
   const metadata: Record<string, string> = {};
 
   // Parse very simple YAML-like frontmatter
-  frontmatterStr.split('\n').forEach(line => {
+  frontmatterStr.split(/\r?\n/).forEach(line => {
     const colonIndex = line.indexOf(':');
     if (colonIndex !== -1) {
       const key = line.slice(0, colonIndex).trim();
