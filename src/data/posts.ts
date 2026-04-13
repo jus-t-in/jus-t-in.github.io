@@ -13,7 +13,7 @@ export const categories = [
   'Softwares',
   'Databases',
   'Workflows',
-  'Ubuntu',
+  'Linux',
 ];
 
 const mdFiles = import.meta.glob('./posts/*.md', { query: '?raw', import: 'default', eager: true }) as Record<string, string>;

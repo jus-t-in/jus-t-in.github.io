@@ -1,6 +1,6 @@
 ---
 title: 'Ubuntu 安装 NVIDIA 驱动和 CUDA (NVCC)'
-category: 'Ubuntu'
+category: 'Linux'
 date: '2025/04/10 10:00'
 modifiedDate: '2026/04/05 05:07'
 ---

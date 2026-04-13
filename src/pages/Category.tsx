@@ -18,7 +18,7 @@ export function Category() {
       Softwares: "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300",
       Databases: "bg-teal-100 text-teal-800 dark:bg-teal-900/30 dark:text-teal-300",
       Workflows: "bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300",
-      Ubuntu: "bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300",
+      Linux: "bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300",
     };
     return colors[category] || "bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-300";
   };

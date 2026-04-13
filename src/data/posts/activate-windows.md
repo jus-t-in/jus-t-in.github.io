@@ -1,6 +1,6 @@
 ---
 title: '激活 Windows'
-category: 'Ubuntu'
+category: 'Linux'
 date: '2025/12/10 01:11'
 modifiedDate: '2026/01/30 20:49'
 ---

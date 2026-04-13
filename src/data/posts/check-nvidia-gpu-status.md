@@ -1,6 +1,6 @@
 ---
 title: '查看 NVIDIA 显卡状态'
-category: 'Ubuntu'
+category: 'Linux'
 date: '2026/01/15 03:39'
 modifiedDate: '2026/02/24 00:15'
 ---
