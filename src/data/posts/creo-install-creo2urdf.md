@@ -1,11 +1,11 @@
 ---
-title: 'Creo11 安装使用 creo2urdf'
+title: 'Creo11 安装 creo2urdf'
 category: 'Softwares'
 date: '2026/4/14 9:15'
 modifiedDate: '2026/4/14 9:15'
 ---
 
-# Creo11 安装并使用 creo2urdf
+# Creo11 安装 creo2urdf
 
 ## 一、安装creo2urdf
 https://github.com/mesh-iit/creo2urdf
@@ -39,4 +39,5 @@ END
 ![alt text](images/creo-install&use-creo2urdf/image5.png)
 
 ## 二、使用
-
+我没成功。。。
+后面用的step2urdf.top，先把creo的模型文件另存为stp格式，导入网站，设置base和link相关参数，可预览，最后导出即可。
