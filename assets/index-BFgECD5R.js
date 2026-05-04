@@ -131,11 +131,57 @@ modifiedDate: '2026/02/24 00:15'
 # 查看 NVIDIA 显卡状态
 
 使用 \`nvidia-smi\` 命令可以查看显卡状态...`,Xx=`---\r
-title: 'Creo11 安装 creo2urdf'\r
+title: '在Clion上开发STM32的配置与使用 '\r
 category: 'Softwares'\r
-date: '2026/4/14 9:15'\r
-modifiedDate: '2026/4/14 9:15'\r
----`,Zx=`---
+date: '2026/5/4 13:18'\r
+modifiedDate: '2026/5/4 13:18'\r
+---\r
+\r
+# 在Clion上开发STM32的配置与使用\r
+Clin+CubeMX\r
+\r
+## 配置\r
+详见以下网址\r
+https://docs.keysking.com/docs/stm32/getting-started\r
+\r
+## 使用\r
+\r
+### 1.CubeMX创建工程\r
+1）做些基础配置\r
+![alt text](images/cline-stm32-configuration-use/image1.png)\r
+\r
+2）选择芯片型号（我是stm32f407vet6）\r
+![alt text](images/cline-stm32-configuration-use/image2.png)\r
+\r
+3）设置debug模式，并设置额外时钟基准（因为在使用rtos时，hal库需要一个systick以外的定时器作为时钟基准.freeRtos会以SysTICk中段作为持中基准，因而会将SISTIC的中断优先级设置的比较低，甚至有时会关闭其中断，这时可能会导致hell库的定时发生错乱）。\r
+![alt text](images/cline-stm32-configuration-use/image3.png)\r
+\r
+4）设置灯的GPIO口，按板子原理图选择\r
+![alt text](images/cline-stm32-configuration-use/image4.png)\r
+![alt text](images/cline-stm32-configuration-use/image5.png)\r
+\r
+5）FreeRtos配置，在左侧边栏中选择。直接完成移植\r
+![alt text](images/cline-stm32-configuration-use/image6.png)\r
+\r
+6）项目设置（project manager）\r
+修改项目名称和工具链后生成代码\r
+![alt text](images/cline-stm32-configuration-use/image7.png)\r
+\r
+### 2.Clion中配置\r
+1）clion中打开生成的项目，并配置预设\r
+![alt text](images/cline-stm32-configuration-use/image8.png)\r
+\r
+2）在main.c文件中打开文件修改Core/Src/main.c，写个小灯定时闪烁的功能\r
+![alt text](images/cline-stm32-configuration-use/image9.png)\r
+\r
+3）用openocd驱动stlink下载文件，因而配置openocd配置\r
+![alt text](images/cline-stm32-configuration-use/image10.png)\r
+stm32f4_stlink-v2.cfg内容如下，根据stlink和芯片版本修改\r
+![alt text](images/cline-stm32-configuration-use/image11.png)\r
+\r
+4）连接stlink和板子，运行，小灯闪烁\r
+![alt text](images/cline-stm32-configuration-use/image12.png)\r
+`,Zx=`---
 title: '使用 Cloudflare One (Zero Trust) Web...'
 category: 'Networks'
 date: '2026/01/05 17:05'
