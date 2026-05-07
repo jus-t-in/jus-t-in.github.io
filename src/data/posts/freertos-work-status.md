@@ -2,7 +2,7 @@
 title: 'FreeRTOS任务状态'
 category: 'Softwares'
 date: '2026/05/6 18:48'
-modifiedDate: '2026/05/6 18:48'
+modifiedDate: '2026/05/6 21:15'
 ---
 
 # FreeRTOS任务状态
@@ -28,8 +28,9 @@ osDlay会让任务进入blocked等待，让出cpu资源。
 ## 2.断点调试
 
 ### 1、设置断点debug
+在各个任务中设置断点。
 ![alt text](images/freertos-work-status/image-4.png)
-选择“freertos对象”，即可看到任务信息
+运行后选择“freertos对象”，即可看到任务信息
 ![alt text](images/freertos-work-status/image-5.png)
 此处LED任务不是ready，因为freertos会把代表正在运行任务的指针变量（psCurrentTCB）指向优先级最大的任务，以便启动时直接执行。
 
@@ -52,7 +53,7 @@ clion中无等待对象的Blocked是suspended，有等待对象的blocked就是b
 ## 3.补充
 debug时的clion提醒
 ![alt text](images/freertos-work-status/image-10.png)
-在cubeMX中配置即可
+在cubeMX中配置即可,双击clion中的ioc文件，在cubeMX中打开
 ![alt text](images/freertos-work-status/image-11.png)
 主要打开以下两项即可修复
 ![alt text](images/freertos-work-status/image-12.png)
