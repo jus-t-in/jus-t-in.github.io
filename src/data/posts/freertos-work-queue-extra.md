@@ -2,7 +2,7 @@
 title: 'FreeRTOS队列(补充)'
 category: 'Softwares'
 date: '2026/05/11 19:45'
-modifiedDate: '2026/05/12 21:26'
+modifiedDate: '2026/05/13 22:09'
 ---
 
 # FreeRTOS队列(补充)
@@ -18,7 +18,8 @@ https://www.bilibili.com/video/BV1voqGBpENb
 ![alt text](images/freertos-work-queue-extra/image-1.png)
 
 #### 2）RCC设置
-设置外部时钟为晶振，时钟设置里把主频设置为72MHz。
+设置外部时钟为晶振，时钟设置里把主频设置为72MHz。  
+外部晶振HSE，一般比内部HSI更稳定准确。
 ![alt text](images/freertos-work-queue-extra/image-2.png)
 ![alt text](images/freertos-work-queue-extra/image-3.png)
 
@@ -296,6 +297,7 @@ KeyTask.c如下：
     // 用pvPortMalloc要：include "FreeRTOS.h"
     #include "FreeRTOS.h"
     // #include "Types/LEDType.h"
+    // RESET为低电平，原理图上按键按下接地
     #define IS_KEY_PRESSED() (HAL_GPIO_ReadPin(k1_GPIO_Port, k1_Pin) == GPIO_PIN_RESET)
     // 检测间隔
     #define KEY_CHECK_INTERVAL 10
