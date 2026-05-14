@@ -319,7 +319,7 @@ https://docs.baud-dance.com/docs/stm32/freertos/cubeConfig\r
 title: 'FreeRTOS队列(补充)'\r
 category: 'Softwares'\r
 date: '2026/05/11 19:45'\r
-modifiedDate: '2026/05/12 21:26'\r
+modifiedDate: '2026/05/13 22:09'\r
 ---\r
 \r
 # FreeRTOS队列(补充)\r
@@ -335,7 +335,8 @@ https://www.bilibili.com/video/BV1voqGBpENb\r
 ![alt text](images/freertos-work-queue-extra/image-1.png)\r
 \r
 #### 2）RCC设置\r
-设置外部时钟为晶振，时钟设置里把主频设置为72MHz。\r
+设置外部时钟为晶振，时钟设置里把主频设置为72MHz。  \r
+外部晶振HSE，一般比内部HSI更稳定准确。\r
 ![alt text](images/freertos-work-queue-extra/image-2.png)\r
 ![alt text](images/freertos-work-queue-extra/image-3.png)\r
 \r
@@ -613,6 +614,7 @@ KeyTask.c如下：\r
     // 用pvPortMalloc要：include "FreeRTOS.h"\r
     #include "FreeRTOS.h"\r
     // #include "Types/LEDType.h"\r
+    // RESET为低电平，原理图上按键按下接地\r
     #define IS_KEY_PRESSED() (HAL_GPIO_ReadPin(k1_GPIO_Port, k1_Pin) == GPIO_PIN_RESET)\r
     // 检测间隔\r
     #define KEY_CHECK_INTERVAL 10\r
